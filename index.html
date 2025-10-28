@@ -1,56 +1,113 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Halaman Sign Up</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun - Modern</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right bottom, #6366F1, #EC4899); /* Gradient ungu-pink */
+            background-size: cover;
+            background-position: center;
+        }
+        .card-bg {
+            background-color: rgba(255, 255, 255, 0.95); /* Sedikit transparan */
+            backdrop-filter: blur(10px); /* Efek blur kaca */
+        }
+        input:focus {
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5); /* Fokus ungu */
+            border-color: #6366F1;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="flex items-center justify-center min-h-screen p-4">
 
-  <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-8">
-    <!-- Judul -->
-    <h1 class="text-3xl font-bold text-center text-blue-600 mb-6">Formulir Sign Up</h1>
+    <div class="card-bg p-8 rounded-2xl shadow-xl w-full max-w-md transform transition-all duration-300 hover:scale-[1.01]">
 
-    <!-- Form Biodata Diri -->
-    <form class="space-y-4">
-      <div>
-        <label class="block text-gray-700 font-semibold mb-1">Nama Lengkap</label>
-        <input type="text" placeholder="Masukkan nama lengkap"
-          class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-2">
+                Bergabunglah Bersama Kami!
+            </h2>
+            <p class="text-gray-600 text-md">
+                Buat akun Anda untuk memulai petualangan baru.
+            </p>
+        </div>
 
-      <div>
-        <label class="block text-gray-700 font-semibold mb-1">Email</label>
-        <input type="email" placeholder="Masukkan email"
-          class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
+        <form action="#" method="POST" class="space-y-6">
+            
+            <div>
+                <label for="nama" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Nama Lengkap
+                </label>
+                <input 
+                    type="text" 
+                    id="nama" 
+                    name="nama" 
+                    placeholder="Contoh: Budi Santoso"
+                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition duration-150 ease-in-out"
+                    required
+                >
+            </div>
 
-      <div>
-        <label class="block text-gray-700 font-semibold mb-1">Nomor Telepon</label>
-        <input type="tel" placeholder="Masukkan nomor telepon"
-          class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
+            <div>
+                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Alamat Email
+                </label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="contoh@email.com"
+                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition duration-150 ease-in-out"
+                    required
+                >
+            </div>
 
-      <div>
-        <label class="block text-gray-700 font-semibold mb-1">Password</label>
-        <input type="password" placeholder="Masukkan password"
-          class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
+            <div>
+                <label for="password" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Password
+                </label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Minimal 8 karakter"
+                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition duration-150 ease-in-out"
+                    required
+                >
+            </div>
 
-      <!-- Tombol Submit -->
-      <button type="submit"
-        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200">
-        Daftar Sekarang
-      </button>
-    </form>
+            <div>
+                <button 
+                    type="submit" 
+                    class="w-full bg-gradient-to-r from-indigo-600 to-purple-700 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:from-indigo-700 hover:to-purple-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-0.5"
+                >
+                    Daftar Sekarang
+                </button>
+            </div>
 
-    <!-- Navigasi ke Home -->
-    <p class="text-center text-sm text-gray-600 mt-4">
-      Sudah punya akun?
-      <a href="index.html" class="text-blue-600 hover:underline font-semibold">Kembali ke Home</a>
-    </p>
-  </div>
+        </form>
+
+        <div class="text-center mt-8">
+            <p class="text-sm text-gray-600">
+                Sudah punya akun? 
+                <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-800 hover:underline transition duration-150">
+                    Masuk di sini
+                </a>
+            </p>
+            
+            <p class="text-sm text-gray-500 mt-5">
+                <a href="index.html" class="flex items-center justify-center text-gray-600 hover:text-gray-800 hover:underline transition duration-150">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Kembali ke Beranda
+                </a>
+            </p>
+        </div>
+
+    </div>
 
 </body>
 </html>
